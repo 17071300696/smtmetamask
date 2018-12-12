@@ -1,0 +1,57 @@
+1.修改显示文字
+  send ETH  和 Only send SMT to an Ethereum address  
+在文件夹 spectrum–extention-develop\app\_locales\en   找到修改上面的文字 修改即可
+
+1.修改显示文字
+735行:"onlySendToEtherAddress": {
+    "message": "Only send ETH to an Ethereum address."
+  }, 
+修改为Only send SMT to an Spectrum address
+
+1..修改显示文字
+980行： "sendETH": {
+    "message": "Send ETH"
+  }, 
+修改为Send SMT
+
+2.修改主页面logo
+\spectrum–extention-develop\app\images\logo
+metamask-fox.svg 这个替换成自己的logo 即可
+
+3.修改金额后面的单位文字
+ 368行  ETH -> SMT
+
+4.修改显示文字280行  
+The default network for Ether transactions is Main Net. 
+->The default network for SMT transactions is spectrum.
+
+5.修改代币后面的logo
+spectrum–extention-develop\app\images\eth.svg  这个是 显示代币的logo
+改成自己的小图标logo
+
+6.修改显示文字627行
+Main Ethereum Network -> spectrum Network
+
+7.修改显示文字918行
+Rinkeby Test Network -> Spectrum Testnet Network
+
+8.下拉菜单修改
+spectrum–extention-develop\ui\app\components\dropdowns
+network-dropdown.js文件
+
+删除 和修改 下拉的 网略显示
+h(
+DropdownMenuItem,
+  {
+ key: 'ropsten',
+     }）  
+h(
+DropdownMenuItem,
+  {
+ key: 'kovan',
+     }）  
+两个样式代码
+["kovan" === r ? c("i.fa.fa-check") : c(".network-check__transparent", "✓"), c(b, {
+                backgroundColor: "#7057ff",
+                isSelected: "kovan" === r
+            }), 
